@@ -1,15 +1,15 @@
-name: CI Pipeline
+name: Self Hosted Runner Test
 
 on:
   push:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Run Build
-        run: echo "Build Successful"
+      - name: Test Command
+        run: echo "Self-hosted runner working"
